@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EMDD - Smart Glasses 3D Viewer</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>EMDD - Group 4 - Unit 3 (2025-26)</h1>
+    <h2>3D Model: Smart Glasses</h2>
+  </header>
+
+  <main>
+    <div class="viewer-container">
+      <model-viewer id="viewer"
+        src="assets/emdd-4unit3.glb"
+        alt="Smart Glasses Model"
+        camera-controls
+        auto-rotate
+        ar
+        shadow-intensity="1"
+        exposure="1">
+      </model-viewer>
+    </div>
+
+    <div class="controls">
+      <button onclick="setView('front')">Front View</button>
+      <button onclick="setView('back')">Back View</button>
+      <button onclick="setView('left')">Left View</button>
+      <button onclick="setView('right')">Right View</button>
+      <button onclick="toggleRotation()">Toggle Rotation</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
